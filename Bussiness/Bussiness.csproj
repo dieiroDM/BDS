@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Aluno.cs" />
     <Compile Include="Cartao.cs" />
+    <Compile Include="CursoBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

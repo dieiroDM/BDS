@@ -51,10 +51,11 @@ namespace EmissorCartao
             this.btnConsultar.Location = new System.Drawing.Point(21, 308);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(244, 180);
-            this.btnConsultar.TabIndex = 1;
+            this.btnConsultar.TabIndex = 0;
             this.btnConsultar.Text = "Consultar Cartões";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnEmitir
             // 
@@ -65,13 +66,14 @@ namespace EmissorCartao
             this.btnEmitir.Text = "Emitir Cartão";
             this.btnEmitir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmitir.UseVisualStyleBackColor = true;
+            this.btnEmitir.Click += new System.EventHandler(this.btnEmitir_Click);
             // 
             // btnAlunos
             // 
             this.btnAlunos.Location = new System.Drawing.Point(521, 308);
             this.btnAlunos.Name = "btnAlunos";
             this.btnAlunos.Size = new System.Drawing.Size(244, 180);
-            this.btnAlunos.TabIndex = 1;
+            this.btnAlunos.TabIndex = 2;
             this.btnAlunos.Text = "Alunos";
             this.btnAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAlunos.UseVisualStyleBackColor = true;
@@ -89,6 +91,7 @@ namespace EmissorCartao
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SECE v1.0";
             this.ResumeLayout(false);
 

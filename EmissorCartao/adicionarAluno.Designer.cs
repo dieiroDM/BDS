@@ -45,46 +45,48 @@ namespace EmissorCartao
             this.cbCurso = new System.Windows.Forms.ComboBox();
             this.dtNascimento = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnAdd_ECard = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lbErro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(101, 197);
+            this.txtNome.Location = new System.Drawing.Point(26, 141);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(515, 26);
             this.txtNome.TabIndex = 0;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtNBI
             // 
-            this.txtNBI.Location = new System.Drawing.Point(101, 274);
+            this.txtNBI.Location = new System.Drawing.Point(26, 218);
             this.txtNBI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNBI.Name = "txtNBI";
             this.txtNBI.Size = new System.Drawing.Size(338, 26);
-            this.txtNBI.TabIndex = 0;
+            this.txtNBI.TabIndex = 1;
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(241, 396);
+            this.txtTelefone.Location = new System.Drawing.Point(166, 340);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(198, 26);
-            this.txtTelefone.TabIndex = 0;
+            this.txtTelefone.TabIndex = 4;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(101, 338);
+            this.txtEmail.Location = new System.Drawing.Point(26, 282);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(338, 26);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(97, 172);
+            this.label1.Location = new System.Drawing.Point(22, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 20);
             this.label1.TabIndex = 1;
@@ -93,7 +95,7 @@ namespace EmissorCartao
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 249);
+            this.label2.Location = new System.Drawing.Point(22, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 20);
             this.label2.TabIndex = 1;
@@ -102,7 +104,7 @@ namespace EmissorCartao
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(237, 371);
+            this.label3.Location = new System.Drawing.Point(162, 315);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 1;
@@ -111,7 +113,7 @@ namespace EmissorCartao
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(97, 313);
+            this.label4.Location = new System.Drawing.Point(22, 257);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 1;
@@ -120,16 +122,16 @@ namespace EmissorCartao
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(486, 251);
+            this.label5.Location = new System.Drawing.Point(411, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 20);
+            this.label5.Size = new System.Drawing.Size(121, 20);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Ano Acaadêmico";
+            this.label5.Text = "Ano Acadêmico";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(491, 313);
+            this.label6.Location = new System.Drawing.Point(416, 257);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 20);
             this.label6.TabIndex = 1;
@@ -138,7 +140,7 @@ namespace EmissorCartao
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(95, 373);
+            this.label7.Location = new System.Drawing.Point(20, 317);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 20);
             this.label7.TabIndex = 1;
@@ -147,76 +149,89 @@ namespace EmissorCartao
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(373, 86);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(200, 58);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.Size = new System.Drawing.Size(357, 39);
             this.label8.TabIndex = 1;
-            this.label8.Text = "label1";
+            this.label8.Text = "CADASTRAR ALUNO";
             // 
             // cbNivel
             // 
             this.cbNivel.FormattingEnabled = true;
-            this.cbNivel.Location = new System.Drawing.Point(495, 274);
+            this.cbNivel.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cbNivel.Location = new System.Drawing.Point(420, 218);
             this.cbNivel.Name = "cbNivel";
             this.cbNivel.Size = new System.Drawing.Size(121, 28);
-            this.cbNivel.TabIndex = 2;
+            this.cbNivel.TabIndex = 5;
+            this.cbNivel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNivel_KeyPress);
             // 
             // cbCurso
             // 
             this.cbCurso.FormattingEnabled = true;
-            this.cbCurso.Location = new System.Drawing.Point(495, 336);
+            this.cbCurso.Location = new System.Drawing.Point(420, 280);
             this.cbCurso.Name = "cbCurso";
             this.cbCurso.Size = new System.Drawing.Size(198, 28);
-            this.cbCurso.TabIndex = 2;
+            this.cbCurso.TabIndex = 6;
+            this.cbCurso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbCurso_KeyPress);
             // 
             // dtNascimento
             // 
             this.dtNascimento.CustomFormat = "dd-MM-yyyy";
             this.dtNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNascimento.Location = new System.Drawing.Point(101, 396);
+            this.dtNascimento.Location = new System.Drawing.Point(26, 340);
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(118, 26);
             this.dtNascimento.TabIndex = 3;
+            this.dtNascimento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtNascimento_KeyPress);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(101, 460);
+            this.btnAdd.Location = new System.Drawing.Point(99, 429);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(141, 49);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Size = new System.Drawing.Size(350, 49);
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Salvar";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnAdd_ECard
-            // 
-            this.btnAdd_ECard.Location = new System.Drawing.Point(265, 460);
-            this.btnAdd_ECard.Name = "btnAdd_ECard";
-            this.btnAdd_ECard.Size = new System.Drawing.Size(216, 49);
-            this.btnAdd_ECard.TabIndex = 4;
-            this.btnAdd_ECard.Text = "Salvar e Emitir o Cartão";
-            this.btnAdd_ECard.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(504, 460);
+            this.btnCancelar.Location = new System.Drawing.Point(13, 12);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(141, 49);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(110, 49);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "<   VOLTAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lbErro
+            // 
+            this.lbErro.ForeColor = System.Drawing.Color.Red;
+            this.lbErro.Location = new System.Drawing.Point(65, 371);
+            this.lbErro.Name = "lbErro";
+            this.lbErro.Size = new System.Drawing.Size(406, 55);
+            this.lbErro.TabIndex = 1;
+            this.lbErro.Text = "erro";
+            this.lbErro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbErro.Visible = false;
             // 
             // adicionarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 524);
+            this.ClientSize = new System.Drawing.Size(639, 524);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAdd_ECard);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtNascimento);
             this.Controls.Add(this.cbCurso);
             this.Controls.Add(this.cbNivel);
+            this.Controls.Add(this.lbErro);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
@@ -232,7 +247,9 @@ namespace EmissorCartao
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "adicionarAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adicionarAluno";
+            this.Load += new System.EventHandler(this.adicionarAluno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +273,7 @@ namespace EmissorCartao
         private System.Windows.Forms.ComboBox cbCurso;
         private System.Windows.Forms.DateTimePicker dtNascimento;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnAdd_ECard;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lbErro;
     }
 }

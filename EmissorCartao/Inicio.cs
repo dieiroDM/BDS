@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EmissorCartao
@@ -25,10 +18,29 @@ namespace EmissorCartao
                 Form_Add_Aluno.Show();
                 this.Hide();
             }
-            catch (Exception)
+            catch { }
+        }
+
+        private void btnEmitir_Click(object sender, EventArgs e)
+        {
+            try
             {
-                throw;
+                emitirCartao EC = new emitirCartao();
+                EC.Show();
+                this.Hide();
             }
+            catch { }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Consulta consulta = new Consulta();
+                consulta.Show();
+                this.Hide();
+            }
+            catch { }
         }
     }
 }

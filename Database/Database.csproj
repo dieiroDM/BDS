@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Aluno.cs" />
     <Compile Include="Cartao.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="CursoBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
