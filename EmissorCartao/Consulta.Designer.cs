@@ -328,6 +328,7 @@ namespace EmissorCartao
             this.btnPrint.TabIndex = 7;
             this.btnPrint.Text = "Imprimir";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // lbNome
             // 

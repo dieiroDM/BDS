@@ -30,6 +30,7 @@ namespace EmissorCartao
         private void InitializeComponent()
         {
             this.gbEmitirCartao = new System.Windows.Forms.GroupBox();
+            this.btnUploadFoto = new System.Windows.Forms.Button();
             this.lbDataV = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTerminarCard = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@ namespace EmissorCartao
             // 
             // gbEmitirCartao
             // 
+            this.gbEmitirCartao.Controls.Add(this.btnUploadFoto);
             this.gbEmitirCartao.Controls.Add(this.lbDataV);
             this.gbEmitirCartao.Controls.Add(this.button1);
             this.gbEmitirCartao.Controls.Add(this.btnTerminarCard);
@@ -75,6 +77,16 @@ namespace EmissorCartao
             this.gbEmitirCartao.TabStop = false;
             this.gbEmitirCartao.Text = "Emitir Cartão";
             this.gbEmitirCartao.Visible = false;
+            // 
+            // btnUploadFoto
+            // 
+            this.btnUploadFoto.Location = new System.Drawing.Point(227, 152);
+            this.btnUploadFoto.Name = "btnUploadFoto";
+            this.btnUploadFoto.Size = new System.Drawing.Size(102, 23);
+            this.btnUploadFoto.TabIndex = 6;
+            this.btnUploadFoto.Text = "Carregar Foto";
+            this.btnUploadFoto.UseVisualStyleBackColor = true;
+            this.btnUploadFoto.Click += new System.EventHandler(this.btnUploadFoto_Click);
             // 
             // lbDataV
             // 
@@ -153,6 +165,7 @@ namespace EmissorCartao
             // picFotoAluno
             // 
             this.picFotoAluno.BackColor = System.Drawing.Color.Transparent;
+            this.picFotoAluno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picFotoAluno.Location = new System.Drawing.Point(77, 75);
             this.picFotoAluno.Name = "picFotoAluno";
             this.picFotoAluno.Size = new System.Drawing.Size(144, 142);
@@ -345,5 +358,6 @@ namespace EmissorCartao
         private System.Windows.Forms.Label lbDataV;
         private System.Windows.Forms.TextBox txtPalavrachave;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUploadFoto;
     }
 }

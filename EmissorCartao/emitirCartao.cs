@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 
 namespace EmissorCartao
@@ -10,6 +12,7 @@ namespace EmissorCartao
         {
             InitializeComponent();
         }
+
 
         private void selecionarFoto()
         {
@@ -45,7 +48,6 @@ namespace EmissorCartao
 
         private void emitirCartao_Load(object sender, EventArgs e)
         {
-
             mostrarAlunos();
         }
 
@@ -156,6 +158,29 @@ namespace EmissorCartao
             {
 
                 throw;
+            }
+        }
+
+        private void btnUploadFoto_Click(object sender, EventArgs e)
+        {
+            selecionarFoto();
+            
+        }
+
+        private void btncap_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                caminhoFoto = @"c:\dados\" + "ImagemWebCam" + DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + ".jpg";
+
+                picFotoAluno.Image.Save(caminhoFoto, ImageFormat.Jpeg);
+                picFotoAluno.ImageLocation = caminhoFoto;
+
+                MessageBox.Show("Imagem salva com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message);
             }
         }
 

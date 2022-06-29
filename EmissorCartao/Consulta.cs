@@ -8,6 +8,7 @@ namespace EmissorCartao
     public partial class Consulta : Form
     {
         private int cardID;
+
         public Consulta()
         {
             InitializeComponent();
@@ -61,6 +62,8 @@ namespace EmissorCartao
                 {
                     pictureBox1.Image = Image.FromStream(foto);
                 }
+                btn2via.Enabled = true;
+                btnPrint.Enabled = true;
             }
             catch (Exception)
             {
@@ -68,7 +71,6 @@ namespace EmissorCartao
                 throw;
             }
         }
-
 
         private void pesquisarAlunos()
         {
@@ -142,6 +144,14 @@ namespace EmissorCartao
                 {
                     MessageBox.Show("2ª via Emitida com Sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (cardID != 0)
+            {
+                Bussiness.ImprimirCartao imprimir = new Bussiness.ImprimirCartao(lbNome.Text, lbNMat.Text, lbCurso.Text, lbDataE.Text, lbDataV.Text);
             }
         }
     }
